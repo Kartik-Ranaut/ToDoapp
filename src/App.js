@@ -49,14 +49,14 @@ function App() {
   },[]);
   return (
     <div className="App">
-      <div>
+      <div className='inputdiv'>
         <input id="input" type="text" placeholder="Title"></input>
-        <button onClick={addtask}>Add Task</button>
+        <button id='addtask' onClick={addtask}>Add Task</button>
       </div>
-      <div>
+      <div className='outputdiv'>
         {
           datatodo.map((element)=>{
-            return(<Value {...element}></Value>);
+            return(<Value {...element} getfunction={getAllData}></Value>);
           }
           )
         }
